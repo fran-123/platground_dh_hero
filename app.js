@@ -1,10 +1,10 @@
 const express=require("express");
 const app =express();
 const path =require("path");
-
+const puerto = 3030;
 app.use(express.static("public"))
 
-app.listen(3030,()=>console.log( "servidor corriendo"));
+app.listen(3030,()=>console.log( "servidor corriendo en http://localhost:"+puerto));
 
 
 app.get("/",(req,res)=>res.sendFile(path.join(__dirname,"views","index.html")))
